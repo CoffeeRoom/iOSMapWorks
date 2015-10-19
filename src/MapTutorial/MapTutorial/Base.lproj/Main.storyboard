@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MNG-Ib-QPg"/>
+                        <viewControllerLayoutGuide type="bottom" id="QsS-CB-un7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pN8-rO-cFa">
+                                <rect key="frame" x="137" y="371" width="46" height="30"/>
+                                <state key="normal" title="Up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-AK-7XN">
+                                <rect key="frame" x="137" y="443" width="46" height="30"/>
+                                <state key="normal" title="Down"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVi-pt-tWw">
+                                <rect key="frame" x="191" y="406" width="46" height="30"/>
+                                <state key="normal" title="Right"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-5T-8uq">
+                                <rect key="frame" x="83" y="406" width="46" height="30"/>
+                                <state key="normal" title="Left"/>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UuD-Ly-zug">
+                                <rect key="frame" x="30" y="95" width="260" height="260"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rQ1-5T-8uq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="8Qr-xn-xsy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JVi-pt-tWw" secondAttribute="trailing" constant="50" id="BVM-4C-f1Y"/>
+                            <constraint firstItem="UuD-Ly-zug" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EqY-PN-VMV"/>
+                            <constraint firstItem="uXg-AK-7XN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="GOX-9z-EqB"/>
+                            <constraint firstItem="JVi-pt-tWw" firstAttribute="top" secondItem="UuD-Ly-zug" secondAttribute="bottom" constant="55" id="T0B-6A-dJX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pN8-rO-cFa" secondAttribute="trailing" constant="80" id="ZKO-3P-EtJ"/>
+                            <constraint firstItem="pN8-rO-cFa" firstAttribute="top" secondItem="UuD-Ly-zug" secondAttribute="bottom" constant="30" id="fE1-8p-1mY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UuD-Ly-zug" secondAttribute="trailing" id="ft8-Mi-cXP"/>
+                            <constraint firstItem="uXg-AK-7XN" firstAttribute="top" secondItem="pN8-rO-cFa" secondAttribute="bottom" constant="30" id="oRB-jl-hvi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uXg-AK-7XN" secondAttribute="trailing" constant="80" id="rcJ-Kb-q9M"/>
+                            <constraint firstItem="pN8-rO-cFa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="vng-CL-a8C"/>
+                            <constraint firstItem="rQ1-5T-8uq" firstAttribute="top" secondItem="UuD-Ly-zug" secondAttribute="bottom" constant="55" id="wca-9R-ojx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DownButton" destination="uXg-AK-7XN" id="1eW-Ye-xiP"/>
+                        <outlet property="LeftButton" destination="rQ1-5T-8uq" id="CfM-Fe-yyY"/>
+                        <outlet property="RightButton" destination="JVi-pt-tWw" id="UOa-t9-qWn"/>
+                        <outlet property="UpButton" destination="pN8-rO-cFa" id="DSr-ER-8XA"/>
+                        <outlet property="map" destination="UuD-Ly-zug" id="9pu-rs-jvK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="406"/>
+        </scene>
+    </scenes>
+</document>
