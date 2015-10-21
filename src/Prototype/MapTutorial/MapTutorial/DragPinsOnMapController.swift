@@ -9,10 +9,23 @@
 import UIKit
 import MapKit
 
-class DragPinsOnMapController: ViewController {
+class DragPinsOnMapController: UIViewController {
   
     override func viewDidLoad() {
         
         
     }
+    
+    var pinClicked=false
+    
+    @IBOutlet weak var OrangePinButton: UIButton!
+    @IBAction func OrangePinButtonPushed(sender: AnyObject) {
+        pinClicked = true
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        OrangePinButton.center = (touches.first?.locationInView(view))!
+    }
+    
+    
 }

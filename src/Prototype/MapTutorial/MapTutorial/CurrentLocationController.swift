@@ -10,21 +10,36 @@ import UIKit
 import MapKit
 import EventKit
 
-class CurrentLocationController: ViewController {
+class CurrentLocationController: UIViewController {
     
     @IBOutlet weak var LatitudeTextField: UITextField!
-    @IBOutlet weak var LongtitudeTextField: UITextField!
+    @IBOutlet weak var LongitudeTextField: UITextField!
     
-    override func viewDidLoad() {
-//        LatitudeTextField.placeholder = String(super.currentLatitude)
-//        LongtitudeTextField.placeholder = String(super.currentLongitude)
+    var latitude: Double = 0
+    var Longitude: Double = 0
+        
+    var text = "init"
+
+    func setLatitudeTextFieldPlaceholder(latitude : Double) {
+        text = String(latitude)
+        if let textField : UITextField! = LatitudeTextField {
+            textField.placeholder = text
+        }
+
+        let MainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let ViewContainer: ViewController = MainStoryboard.instantiateViewControllerWithIdentifier("MainView") as! ViewController
+
+        ViewContainer.currentLatitude += 0.1
+        
+        presentViewController(ViewContainer, animated: false, completion: nil)
+        
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        LatitudeTextField.placeholder = String(super.currentLatitude)
-        LongtitudeTextField.placeholder = String(super.currentLongitude)
+    override func viewDidAppear(animated: Bool) {
+        LatitudeTextField.placeholder = String(ViewController().currentLatitude)
+        LongitudeTextField.placeholder = String(ViewController().currentLongitude)
+        
     }
-    
     
  
 }

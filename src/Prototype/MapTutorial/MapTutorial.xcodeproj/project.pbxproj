@@ -15,6 +15,7 @@
 		25C4F3491BD4BF85006CCEDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C4F3471BD4BF85006CCEDB /* LaunchScreen.storyboard */; };
 		25C4F3531BD64942006CCEDB /* DragPinsOnMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C4F3521BD64942006CCEDB /* DragPinsOnMapController.swift */; settings = {ASSET_TAGS = (); }; };
 		25C4F3551BD64B75006CCEDB /* CurrentLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C4F3541BD64B75006CCEDB /* CurrentLocationController.swift */; settings = {ASSET_TAGS = (); }; };
+		25F51D801BD74968007BE1E8 /* ReservationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F51D7F1BD74968007BE1E8 /* ReservationController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		25C4F34A1BD4BF85006CCEDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MapTutorial/Info.plist; sourceTree = "<group>"; };
 		25C4F3521BD64942006CCEDB /* DragPinsOnMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragPinsOnMapController.swift; sourceTree = "<group>"; };
 		25C4F3541BD64B75006CCEDB /* CurrentLocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationController.swift; sourceTree = "<group>"; };
+		25F51D7F1BD74968007BE1E8 /* ReservationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				25C4F33D1BD4BF85006CCEDB /* ViewController.swift */,
 				25C4F3541BD64B75006CCEDB /* CurrentLocationController.swift */,
 				25C4F3521BD64942006CCEDB /* DragPinsOnMapController.swift */,
+				25F51D7F1BD74968007BE1E8 /* ReservationController.swift */,
 			);
 			path = MapTutorial;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				25C4F3551BD64B75006CCEDB /* CurrentLocationController.swift in Sources */,
 				25C4F33E1BD4BF85006CCEDB /* ViewController.swift in Sources */,
 				25C4F33C1BD4BF85006CCEDB /* AppDelegate.swift in Sources */,
+				25F51D801BD74968007BE1E8 /* ReservationController.swift in Sources */,
 				25C4F3531BD64942006CCEDB /* DragPinsOnMapController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

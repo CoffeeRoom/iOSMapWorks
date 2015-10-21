@@ -10,12 +10,9 @@ import UIKit
 import MapKit // library for MapView
 import EventKit
 
-class ViewController: UIViewController,MKMapViewDelegate {
-
+class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-
-    @IBOutlet weak var locationLabel: UILabel!
     
     var currentLatitude = 37.610926
     var currentLongitude = 126.997215
@@ -48,6 +45,9 @@ class ViewController: UIViewController,MKMapViewDelegate {
         
         self.mapView.setRegion(mapRegion, animated: true)
         
+        CurrentLocationController().latitude = currentLatitude
+        CurrentLocationController().Longitude = currentLongitude
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,13 +58,8 @@ class ViewController: UIViewController,MKMapViewDelegate {
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         currentLatitude = mapView.region.center.latitude
         currentLongitude = mapView.region.center.longitude
-        count+=1
-        locationLabel.text = String(currentLatitude) + "," + String(currentLongitude)
-        
-    }
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 
     }
+    
   }
 
