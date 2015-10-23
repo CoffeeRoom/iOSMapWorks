@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,24 +19,38 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pN8-rO-cFa">
                                 <rect key="frame" x="137" y="371" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Up"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-AK-7XN">
                                 <rect key="frame" x="137" y="443" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Down"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVi-pt-tWw">
                                 <rect key="frame" x="191" y="406" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Right"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-5T-8uq">
                                 <rect key="frame" x="83" y="406" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Left"/>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UuD-Ly-zug">
                                 <rect key="frame" x="30" y="95" width="260" height="260"/>
+                                <animations/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIw-IV-hir">
+                                <rect key="frame" x="144" y="518" width="32" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="WSh-hS-a8e" kind="modal" id="A9P-hM-DoP"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rQ1-5T-8uq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="8Qr-xn-xsy"/>
@@ -65,5 +79,44 @@
             </objects>
             <point key="canvasLocation" x="149" y="406"/>
         </scene>
+        <!--Map Pinning View Controller-->
+        <scene sceneID="2Qa-T3-wMR">
+            <objects>
+                <viewController id="WSh-hS-a8e" customClass="MapPinningViewController" customModule="MapTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oUX-L2-kwO"/>
+                        <viewControllerLayoutGuide type="bottom" id="6B0-Tw-yRR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="71A-fy-wjg" customClass="Map">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="V6r-yb-SrN">
+                                <rect key="frame" x="30" y="93" width="260" height="260"/>
+                                <animations/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rak-tH-xTu">
+                                <rect key="frame" x="128" y="383" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" title="Pin" image="OrangePin"/>
+                                <connections>
+                                    <action selector="touched:" destination="WSh-hS-a8e" eventType="touchUpInside" id="2Ya-Zj-TJu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="OrangePin" destination="Rak-tH-xTu" id="Grs-Zl-W7t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GFv-le-Ee0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="390"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="OrangePin" width="64" height="64"/>
+    </resources>
 </document>

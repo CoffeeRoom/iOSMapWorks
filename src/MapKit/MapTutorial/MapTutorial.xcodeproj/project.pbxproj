@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		255D08461BDA2DBC0020B49F /* MapPinningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D08451BDA2DBC0020B49F /* MapPinningViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		25C4F33C1BD4BF85006CCEDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C4F33B1BD4BF85006CCEDB /* AppDelegate.swift */; };
 		25C4F33E1BD4BF85006CCEDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C4F33D1BD4BF85006CCEDB /* ViewController.swift */; };
 		25C4F3411BD4BF85006CCEDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C4F33F1BD4BF85006CCEDB /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		255D08451BDA2DBC0020B49F /* MapPinningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPinningViewController.swift; sourceTree = "<group>"; };
 		25C4F3381BD4BF85006CCEDB /* MapTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C4F33B1BD4BF85006CCEDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25C4F33D1BD4BF85006CCEDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				25C4F33B1BD4BF85006CCEDB /* AppDelegate.swift */,
 				25C4F33D1BD4BF85006CCEDB /* ViewController.swift */,
+				255D08451BDA2DBC0020B49F /* MapPinningViewController.swift */,
 			);
 			path = MapTutorial;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C4F3441BD4BF85006CCEDB /* MapTutorial.xcdatamodeld in Sources */,
+				255D08461BDA2DBC0020B49F /* MapPinningViewController.swift in Sources */,
 				25C4F33E1BD4BF85006CCEDB /* ViewController.swift in Sources */,
 				25C4F33C1BD4BF85006CCEDB /* AppDelegate.swift in Sources */,
 			);
@@ -305,6 +309,7 @@
 				25C4F34F1BD4BF85006CCEDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
