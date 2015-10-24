@@ -7,34 +7,44 @@
 //
 
 import UIKit
+import MapKit
+
 
 class MapPinningViewController: UIViewController {
+    
+    @IBOutlet weak var map: MKMapView!
+    
+    var PinHolder: CGPoint!
+    
     override func  viewDidLoad() {
-        OrangePin.imageView!.image = UIImage(named: "GrayPin")
+        PinHolder = Pin.center
 
     }
     
     var touchedFlag = false
     
-    @IBOutlet weak var OrangePin: UIButton!
+    @IBOutlet weak var Pin: UIImageView!
+    @IBOutlet weak var OrangeButton: UIButton!
     
-    @IBAction func touched(sender: AnyObject) {
+    @IBAction func OrangeTouched(sender: AnyObject) {
         touchedFlag = true
-        OrangePin.imageView!.image = UIImage(named: "OrangePin")!
+        Pin.image = UIImage(named: "OrangePin")!
         print("on touch")
     }
 
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if touchedFlag {
-            OrangePin.layer.zPosition = 1
-            OrangePin.center = (touches.first?.locationInView(view))!
+            Pin.layer.zPosition = 1
+            Pin.center = (touches.first?.locationInView(view))!
+            Pin.center.y -= 32
         }
         print("touch")
         print(touchedFlag)
     }
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         touchedFlag = false
-       //OrangePin.imageView?.image = UIImage(named: "GrayPin")
+        Pin.center = PinHolder
+        Pin.image = UIImage(named: "GrayPin")
 
 
         print("off touch")

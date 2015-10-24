@@ -95,20 +95,28 @@
                                 <rect key="frame" x="30" y="93" width="260" height="260"/>
                                 <animations/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rak-tH-xTu">
-                                <rect key="frame" x="128" y="383" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMr-OT-MQy">
+                                <rect key="frame" x="113" y="503" width="95" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Pin" image="OrangePin"/>
+                                <state key="normal" title="Orange">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="touched:" destination="WSh-hS-a8e" eventType="touchUpInside" id="2Ya-Zj-TJu"/>
+                                    <action selector="OrangeTouched:" destination="WSh-hS-a8e" eventType="touchUpInside" id="z4w-7r-Odg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GrayPin" translatesAutoresizingMaskIntoConstraints="NO" id="rsh-ul-UT2">
+                                <rect key="frame" x="128" y="396" width="64" height="64"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="OrangePin" destination="Rak-tH-xTu" id="Grs-Zl-W7t"/>
+                        <outlet property="OrangeButton" destination="fMr-OT-MQy" id="zQo-Q5-Soy"/>
+                        <outlet property="Pin" destination="rsh-ul-UT2" id="lqI-IC-XCA"/>
+                        <outlet property="map" destination="V6r-yb-SrN" id="9au-b8-dia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFv-le-Ee0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,6 +125,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="OrangePin" width="64" height="64"/>
+        <image name="GrayPin" width="64" height="64"/>
     </resources>
 </document>
