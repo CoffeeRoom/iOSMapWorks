@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class MapPinningViewController: UIViewController {
     override func  viewDidLoad() {
@@ -20,7 +21,7 @@ class MapPinningViewController: UIViewController {
     
     @IBAction func touched(sender: AnyObject) {
         touchedFlag = true
-        OrangePin.imageView!.image = UIImage(named: "OrangePin")!
+        OrangePin.imageView?.image = UIImage(named: "OrangePin")
         print("on touch")
     }
 
@@ -31,10 +32,15 @@ class MapPinningViewController: UIViewController {
         }
         print("touch")
         print(touchedFlag)
+
     }
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         touchedFlag = false
-       //OrangePin.imageView?.image = UIImage(named: "GrayPin")
+       OrangePin.imageView?.image = UIImage(named: "GrayPin")
+        
+        var myPin = MKPointAnnotation()
+        //myPin.coordinate = touches.first?.locationInView(view)
+        
 
 
         print("off touch")
