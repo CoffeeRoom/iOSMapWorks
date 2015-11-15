@@ -16,9 +16,25 @@ class ViewController: UIViewController {
 
     var xml:XMLIndexer!
     
+    var pointToDraw:[CLLocationCoordinate2D]=[]
+    var pointCount = 0;
+    
+    var currentLatitude = 37.743813
+    var currentLongitude = 127.139749
+    var currentSpan = 0.02
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var currentLocation
+        = CLLocationCoordinate2DMake(currentLatitude, currentLongitude ) // location of Kookmin University
+        var mapSpan
+        = MKCoordinateSpanMake(currentSpan, currentSpan) // smaller value, closer view
+        var mapRegion
+        = MKCoordinateRegionMake(currentLocation, mapSpan)
+        
+        self.TrailsMapView.setRegion(mapRegion, animated: true)
+        
         
         
         if let filepath = NSBundle.mainBundle().pathForResource("example", ofType: "gpx") {
@@ -38,6 +54,10 @@ class ViewController: UIViewController {
         
         enumerate(xml, level: 0)
         
+        /*****  MKPolyline be here !!  *****/
+        let myPolyline = MKPolyline(coordinates: &pointToDraw, count: pointCount)
+        TrailsMapView.addOverlay(myPolyline)
+        
     }
 
     
@@ -48,8 +68,6 @@ class ViewController: UIViewController {
     
     
     func enumerate(indexer: XMLIndexer, level: Int) {
-        
-        var count = 0;
         
         for child in indexer.children {
             
@@ -63,13 +81,27 @@ class ViewController: UIViewController {
                 var lat = Double((child.element?.attributes["lat"])!)!
                 var ele = Double((child["ele"].element?.text!)!)!
                 
-                print("[\(count++)] lon: \(lon), lat: \(lat), ele: \(ele)")
+                print("[\(pointCount)] lon: \(lon), lat: \(lat), ele: \(ele)")
+                
+                pointCount+=1
             
                 /*****  MKPolyline be here !!  *****/
+                pointToDraw += [CLLocationCoordinate2DMake(lat, lon)]
             }
             
             enumerate(child, level: level + 1)
         }
+    }
+    
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        if overlay is MKPolyline {
+            let lineView = MKPolylineRenderer(overlay: overlay)
+            lineView.strokeColor = UIColor.greenColor()
+            
+            return lineView
+        }
+        
+        return nil
     }
 
 }
