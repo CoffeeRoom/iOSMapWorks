@@ -52,12 +52,19 @@ class ViewController: UIViewController {
             print("there is no contents\n")
         }
         
-        enumerate(xml, level: 0)
-        
         /*****  MKPolyline be here !!  *****/
+
+        pointCount = 0
+        enumerateForTrack(xml, level: 0)
+
         let myPolyline = MKPolyline(coordinates: &pointToDraw, count: pointCount)
         TrailsMapView.addOverlay(myPolyline)
         
+        
+        /*****  Annotation be here !!  *****/
+        
+        pointCount = 0
+        enumerateForWaypoint(xml, level: 0)
     }
 
     
@@ -67,7 +74,7 @@ class ViewController: UIViewController {
     }
     
     
-    func enumerate(indexer: XMLIndexer, level: Int) {
+    func enumerateForTrack(indexer: XMLIndexer, level: Int) {
         
         for child in indexer.children {
             
@@ -81,7 +88,7 @@ class ViewController: UIViewController {
                 var lat = Double((child.element?.attributes["lat"])!)!
                 var ele = Double((child["ele"].element?.text!)!)!
                 
-                print("[\(pointCount)] lon: \(lon), lat: \(lat), ele: \(ele)")
+                //print("[\(pointCount)] lon: \(lon), lat: \(lat), ele: \(ele)")
                 
                 pointCount+=1
             
@@ -89,7 +96,7 @@ class ViewController: UIViewController {
                 pointToDraw += [CLLocationCoordinate2DMake(lat, lon)]
             }
             
-            enumerate(child, level: level + 1)
+            enumerateForTrack(child, level: level + 1)
         }
     }
     
@@ -103,6 +110,35 @@ class ViewController: UIViewController {
         
         return nil
     }
+    
+    func enumerateForWaypoint(indexer: XMLIndexer, level: Int) {
+        
+        for child in indexer.children {
+            
+            if(child.element!.name == "wpt") { // yoon // for annotation
+                
+                let lon = Double((child.element?.attributes["lon"])!)!
+                let lat = Double((child.element?.attributes["lat"])!)!
+                let ele = Double((child["ele"].element?.text!)!)!
 
+                let name = String(UTF8String: (child["name"].element?.text)!)!
+                
+                var desc = (child["extensions"]["description"].element?.text == nil ?
+                    "No description" : String(UTF8String: (child["extensions"]["description"].element?.text)!)! )
+                
+                pointCount += 1
+                
+                //print("[\(pointCount)] lon: \(lon), lat: \(lat), ele: \(ele)")
+                print("[\(pointCount)]]")
+                print("name: \(name)")
+                print("desc: \(desc)\n");
+
+            }
+            enumerateForWaypoint(child, level: level+1)
+        }
+    }
+    
 }
+
+
 
