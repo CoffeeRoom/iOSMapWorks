@@ -132,12 +132,32 @@ class ViewController: UIViewController {
                 print("[\(pointCount)]]")
                 print("name: \(name)")
                 print("desc: \(desc)\n");
+                
+                
+                // add annotation
+                    
+                TrailsMapView.addAnnotation( 
+                    NewAnnotation(coordinate: CLLocationCoordinate2DMake(lat, lon), title: name, subtitle: desc)
+                )
 
             }
             enumerateForWaypoint(child, level: level+1)
         }
     }
     
+}
+
+class NewAnnotation: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    var title: String!
+    var subtitle: String!
+    
+    init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
+        self.coordinate = coordinate
+        self.title = title
+        self.subtitle = subtitle
+        super.init()
+    }
 }
 
 
