@@ -12,10 +12,10 @@
 		258613AF1BF2774B00BA6220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258613AD1BF2774B00BA6220 /* Main.storyboard */; };
 		258613B41BF2774B00BA6220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258613B21BF2774B00BA6220 /* LaunchScreen.storyboard */; };
 		258613C01BF2779600BA6220 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258613BF1BF2779600BA6220 /* MapKit.framework */; };
-		258613C21BF278A100BA6220 /* TrailsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613C11BF278A100BA6220 /* TrailsMapViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		258613C61BF27B7A00BA6220 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613C51BF27B7A00BA6220 /* SWXMLHash.swift */; settings = {ASSET_TAGS = (); }; };
-		258613CA1BF27DFD00BA6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258613C91BF27DFD00BA6220 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		258613CC1BF27E3500BA6220 /* example.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 258613CB1BF27E3500BA6220 /* example.gpx */; settings = {ASSET_TAGS = (); }; };
+		258613C21BF278A100BA6220 /* TrailsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613C11BF278A100BA6220 /* TrailsMapViewController.swift */; };
+		258613C61BF27B7A00BA6220 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613C51BF27B7A00BA6220 /* SWXMLHash.swift */; };
+		258613CA1BF27DFD00BA6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258613C91BF27DFD00BA6220 /* Assets.xcassets */; };
+		258613CC1BF27E3500BA6220 /* example.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 258613CB1BF27E3500BA6220 /* example.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -290,6 +290,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = john.TrailsTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -301,6 +302,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = john.TrailsTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -323,6 +325,7 @@
 				258613BA1BF2774B00BA6220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
