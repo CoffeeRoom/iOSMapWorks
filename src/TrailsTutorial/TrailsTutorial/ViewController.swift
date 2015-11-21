@@ -19,12 +19,16 @@ class ViewController: UIViewController {
     var pointToDraw:[CLLocationCoordinate2D]=[]
     var pointCount = 0;
     
+    var pointToAnnotate:[NewAnnotation]=[]
+    
     var currentLatitude = 37.743813
     var currentLongitude = 127.139749
     var currentSpan = 0.02
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /**********  Set Coordinate region  **********/
         
         var currentLocation
         = CLLocationCoordinate2DMake(currentLatitude, currentLongitude ) // location of Kookmin University
@@ -35,7 +39,7 @@ class ViewController: UIViewController {
         
         self.TrailsMapView.setRegion(mapRegion, animated: true)
         
-        
+        /**********  MKPolyline be here !!  **********/
         
         if let filepath = NSBundle.mainBundle().pathForResource("example", ofType: "gpx") {
             do {
@@ -52,7 +56,7 @@ class ViewController: UIViewController {
             print("there is no contents\n")
         }
         
-        /*****  MKPolyline be here !!  *****/
+        /**********  MKPolyline be here !!  **********/
 
         pointCount = 0
         enumerateForTrack(xml, level: 0)
@@ -60,11 +64,16 @@ class ViewController: UIViewController {
         let myPolyline = MKPolyline(coordinates: &pointToDraw, count: pointCount)
         TrailsMapView.addOverlay(myPolyline)
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
         
-        /*****  Annotation be here !!  *****/
+        /**********  Annotation be here !!  **********/
         
         pointCount = 0
         enumerateForWaypoint(xml, level: 0)
+        TrailsMapView.addAnnotations(pointToAnnotate)
     }
 
     
@@ -73,6 +82,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+     * Functions for Drawing Track
+     *
+     * 1. enumerateForTrack
+     *    : enumerate XML File and get values about Track
+     *
+     * 2. mapView
+     *    : Handle Annotation Adding
+     */
     
     func enumerateForTrack(indexer: XMLIndexer, level: Int) {
         
@@ -111,6 +129,16 @@ class ViewController: UIViewController {
         return nil
     }
     
+    /*
+    * Functions for Adding Annotations
+    *
+    * 1. enumerateForWayPoint
+    *    : enumerate XML File and get values about Way point
+    *
+    * 2. mapView
+    *    : Handle Annotation Adding
+    */
+    
     func enumerateForWaypoint(indexer: XMLIndexer, level: Int) {
         
         for child in indexer.children {
@@ -134,15 +162,45 @@ class ViewController: UIViewController {
                 print("desc: \(desc)\n");
                 
                 
-                // add annotation
+                // add annotation to array
+                pointToAnnotate += [NewAnnotation(coordinate: CLLocationCoordinate2DMake(lat, lon), title: name, subtitle: desc)]
                     
-                TrailsMapView.addAnnotation( 
-                    NewAnnotation(coordinate: CLLocationCoordinate2DMake(lat, lon), title: name, subtitle: desc)
-                )
-                //print(TrailsMapView.viewForAnnotation(TrailsMapView.annotations.last!)!.image)// = UIImage(named: "pin")
+//                TrailsMapView.addAnnotation( 
+//                    NewAnnotation(coordinate: CLLocationCoordinate2DMake(lat, lon), title: name, subtitle: desc)
+//                )
             }
             enumerateForWaypoint(child, level: level+1)
         }
+    }
+    // reference: Annotations and accessory views: MKPinAnnotationView
+    // https://www.hackingwithswift.com/read/19/3/annotations-and-accessory-views-mkpinannotationview
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "NewAnnotation"
+        
+        if annotation.isKindOfClass(NewAnnotation.self) {
+            if let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) {
+                
+                annotationView.annotation = annotation
+                return annotationView
+            }
+            else {
+                let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:identifier)
+                
+                // set pin image subview
+//                let pinImgView = UIImageView(image: UIImage(named: "pin"))
+//                annotationView.addSubview(pinImgView)
+                
+                annotationView.enabled = true
+                annotationView.canShowCallout = true
+                
+                let btn = UIButton(type: .DetailDisclosure)
+                annotationView.rightCalloutAccessoryView = btn
+                
+                return annotationView
+            }
+        }
+        
+        return nil
     }
     
 }
