@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mB6-n1-717">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mB6-n1-717">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -64,11 +64,21 @@
                                     <segue destination="mB6-n1-717" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hfo-7D-VtU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-Md-KJl">
+                                <rect key="frame" x="207" y="550" width="186" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button CurrentLocation"/>
+                                <connections>
+                                    <action selector="showCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMy-kG-m72"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h4I-Md-KJl" secondAttribute="bottom" constant="20" id="8vP-ex-XF1"/>
                             <constraint firstItem="pSs-yC-OWE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K20-Ui-aOl"/>
+                            <constraint firstItem="h4I-Md-KJl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PK6-87-n8G"/>
                             <constraint firstItem="pSs-yC-OWE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bsg-Sq-zd3"/>
                         </constraints>
                     </view>

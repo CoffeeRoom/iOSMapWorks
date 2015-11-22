@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var TrailsMapView: MKMapView!
 
@@ -25,8 +25,14 @@ class ViewController: UIViewController {
     var currentLongitude = 127.139749
     var currentSpan = 0.02
     
+    // property for current location
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // request permission whihe the app is in foreground
+        self.locationManager.requestWhenInUseAuthorization()
         
         /**********  Set Coordinate region  **********/
         
@@ -80,6 +86,28 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    /*
+    * Functions for showing current location
+    *
+    * 1. showCurrentLocation
+    *    : shows current location
+    *
+    * Reference: Map View - Current Location in Swift - Xcode 7 iOS 9 Tutorial
+    * https://www.veasoftware.com/tutorials/2015/7/25/map-view-current-location-in-swift-xcode-7-ios-9-tutorial
+    */
+    
+    
+    @IBAction func showCurrentLocation(sender: AnyObject) {
+        
+        self.locationManager.delegate = self
+        
+        // set highest accuracy
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        self.locationManager.startUpdatingLocation()
+        self.TrailsMapView.showsUserLocation = true
     }
     
     /*
