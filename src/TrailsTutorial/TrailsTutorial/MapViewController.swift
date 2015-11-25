@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  TrailsTutorial
 //
 //  Created by Yoonseung Choi on 2015. 11. 11..
@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var TrailsMapView: MKMapView!
 
@@ -215,6 +215,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:identifier)
                 
                 // set pin image subview
+                // yoon // if
 //                let pinImgView = UIImageView(image: UIImage(named: "pin"))
 //                annotationView.addSubview(pinImgView)
                 

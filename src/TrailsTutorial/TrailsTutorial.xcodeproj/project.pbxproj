@@ -8,29 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		258613AA1BF2774B00BA6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613A91BF2774B00BA6220 /* AppDelegate.swift */; };
-		258613AC1BF2774B00BA6220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613AB1BF2774B00BA6220 /* ViewController.swift */; };
+		258613AC1BF2774B00BA6220 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613AB1BF2774B00BA6220 /* MapViewController.swift */; };
 		258613AF1BF2774B00BA6220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258613AD1BF2774B00BA6220 /* Main.storyboard */; };
 		258613B41BF2774B00BA6220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258613B21BF2774B00BA6220 /* LaunchScreen.storyboard */; };
 		258613C01BF2779600BA6220 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258613BF1BF2779600BA6220 /* MapKit.framework */; };
-		258613C21BF278A100BA6220 /* TrailsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613C11BF278A100BA6220 /* TrailsMapViewController.swift */; };
 		258613C61BF27B7A00BA6220 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613C51BF27B7A00BA6220 /* SWXMLHash.swift */; };
 		258613CA1BF27DFD00BA6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258613C91BF27DFD00BA6220 /* Assets.xcassets */; };
 		258613CC1BF27E3500BA6220 /* example.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 258613CB1BF27E3500BA6220 /* example.gpx */; };
+		25B46FE11C060F56009C1D90 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B46FE01C060F56009C1D90 /* IntroViewController.swift */; };
+		25B46FE31C061019009C1D90 /* forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B46FE21C061019009C1D90 /* forest.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		258613A61BF2774B00BA6220 /* TrailsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		258613A91BF2774B00BA6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		258613AB1BF2774B00BA6220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		258613AB1BF2774B00BA6220 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		258613AE1BF2774B00BA6220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		258613B31BF2774B00BA6220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		258613B51BF2774B00BA6220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		258613BF1BF2779600BA6220 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		258613C11BF278A100BA6220 /* TrailsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsMapViewController.swift; sourceTree = "<group>"; };
 		258613C41BF27B7A00BA6220 /* SWXMLHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWXMLHash.h; sourceTree = "<group>"; };
 		258613C51BF27B7A00BA6220 /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		258613C91BF27DFD00BA6220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		258613CB1BF27E3500BA6220 /* example.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = example.gpx; sourceTree = "<group>"; };
+		25B46FE01C060F56009C1D90 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		25B46FE21C061019009C1D90 /* forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = forest.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,8 @@
 				258613CD1BF27F5300BA6220 /* Contents */,
 				258613C31BF27B6C00BA6220 /* SWXMLHash */,
 				258613A91BF2774B00BA6220 /* AppDelegate.swift */,
-				258613C11BF278A100BA6220 /* TrailsMapViewController.swift */,
-				258613AB1BF2774B00BA6220 /* ViewController.swift */,
+				25B46FE01C060F56009C1D90 /* IntroViewController.swift */,
+				258613AB1BF2774B00BA6220 /* MapViewController.swift */,
 				258613AD1BF2774B00BA6220 /* Main.storyboard */,
 				258613C91BF27DFD00BA6220 /* Assets.xcassets */,
 				258613B21BF2774B00BA6220 /* LaunchScreen.storyboard */,
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				258613CB1BF27E3500BA6220 /* example.gpx */,
+				25B46FE21C061019009C1D90 /* forest.jpg */,
 			);
 			name = Contents;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				258613B41BF2774B00BA6220 /* LaunchScreen.storyboard in Resources */,
 				258613CA1BF27DFD00BA6220 /* Assets.xcassets in Resources */,
 				258613CC1BF27E3500BA6220 /* example.gpx in Resources */,
+				25B46FE31C061019009C1D90 /* forest.jpg in Resources */,
 				258613AF1BF2774B00BA6220 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,10 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258613AC1BF2774B00BA6220 /* ViewController.swift in Sources */,
+				258613AC1BF2774B00BA6220 /* MapViewController.swift in Sources */,
 				258613C61BF27B7A00BA6220 /* SWXMLHash.swift in Sources */,
-				258613C21BF278A100BA6220 /* TrailsMapViewController.swift in Sources */,
 				258613AA1BF2774B00BA6220 /* AppDelegate.swift in Sources */,
+				25B46FE11C060F56009C1D90 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
