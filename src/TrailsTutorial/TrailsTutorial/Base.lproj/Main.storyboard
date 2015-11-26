@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mB6-n1-717">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Intro View Controller-->
@@ -29,7 +30,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="uQS-2g-2dM"/>
+                                    <segue destination="LwG-Dw-kNa" kind="presentation" modalTransitionStyle="crossDissolve" id="doO-X6-2py"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,7 +49,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyA-E5-np5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-463.125" y="428.87323943661971"/>
+            <point key="canvasLocation" x="-382" y="302"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="VVc-BE-Bon">
+            <objects>
+                <viewController id="LwG-Dw-kNa" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="c2y-dA-ink"/>
+                        <segue destination="5rd-9P-dhS" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="Pp3-Xx-xHG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4k-z5-j9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427" y="302"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -62,13 +76,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pSs-yC-OWE">
-                                <rect key="frame" x="0.0" y="-31" width="600" height="650"/>
-                                <animations/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xGd-Gi-IyZ"/>
-                                </connections>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pt-qo-Hbw">
                                 <rect key="frame" x="20" y="20" width="34" height="30"/>
                                 <animations/>
@@ -85,12 +92,21 @@
                                     <action selector="showCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMy-kG-m72"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pSs-yC-OWE">
+                                <rect key="frame" x="100" y="100" width="400" height="400"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xGd-Gi-IyZ"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h4I-Md-KJl" secondAttribute="bottom" constant="20" id="8vP-ex-XF1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pSs-yC-OWE" secondAttribute="trailing" constant="5" id="En8-hG-ZOY"/>
                             <constraint firstItem="pSs-yC-OWE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K20-Ui-aOl"/>
+                            <constraint firstItem="pSs-yC-OWE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="M4d-pP-8aa"/>
                             <constraint firstItem="h4I-Md-KJl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PK6-87-n8G"/>
                             <constraint firstItem="pSs-yC-OWE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bsg-Sq-zd3"/>
                         </constraints>
@@ -101,7 +117,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279" y="428"/>
+            <point key="canvasLocation" x="427" y="1064"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="twP-8R-msw">
+            <objects>
+                <tableViewController id="5rd-9P-dhS" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4uk-uB-tfH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nAw-Bf-fJs">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nAw-Bf-fJs" id="72m-dj-EHS">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5rd-9P-dhS" id="9Ig-wU-xz4"/>
+                            <outlet property="delegate" destination="5rd-9P-dhS" id="fhG-HR-oQe"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xM-UN-FhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="1071"/>
         </scene>
     </scenes>
     <resources>

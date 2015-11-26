@@ -70,6 +70,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let myPolyline = MKPolyline(coordinates: &pointToDraw, count: pointCount)
         TrailsMapView.addOverlay(myPolyline)
         
+        
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {

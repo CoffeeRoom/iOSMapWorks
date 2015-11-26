@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250B1B5D1C073286007D432B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B1B5C1C073286007D432B /* SWRevealViewController.m */; };
 		258613AA1BF2774B00BA6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613A91BF2774B00BA6220 /* AppDelegate.swift */; };
 		258613AC1BF2774B00BA6220 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258613AB1BF2774B00BA6220 /* MapViewController.swift */; };
 		258613AF1BF2774B00BA6220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258613AD1BF2774B00BA6220 /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250B1B5A1C073285007D432B /* TrailsTutorial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrailsTutorial-Bridging-Header.h"; sourceTree = "<group>"; };
+		250B1B5B1C073286007D432B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		250B1B5C1C073286007D432B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		258613A61BF2774B00BA6220 /* TrailsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		258613A91BF2774B00BA6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		258613AB1BF2774B00BA6220 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250B1B591C073271007D432B /* SWRevealView */ = {
+			isa = PBXGroup;
+			children = (
+				250B1B5B1C073286007D432B /* SWRevealViewController.h */,
+				250B1B5C1C073286007D432B /* SWRevealViewController.m */,
+				250B1B5A1C073285007D432B /* TrailsTutorial-Bridging-Header.h */,
+			);
+			name = SWRevealView;
+			sourceTree = "<group>";
+		};
 		2586139D1BF2774B00BA6220 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +81,7 @@
 		258613A81BF2774B00BA6220 /* TrailsTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				250B1B591C073271007D432B /* SWRevealView */,
 				258613CD1BF27F5300BA6220 /* Contents */,
 				258613C31BF27B6C00BA6220 /* SWXMLHash */,
 				258613A91BF2774B00BA6220 /* AppDelegate.swift */,
@@ -124,6 +139,7 @@
 		2586139E1BF2774B00BA6220 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Yoonseung Choi";
 				TargetAttributes = {
@@ -178,6 +194,7 @@
 			files = (
 				258613AC1BF2774B00BA6220 /* MapViewController.swift in Sources */,
 				258613C61BF27B7A00BA6220 /* SWXMLHash.swift in Sources */,
+				250B1B5D1C073286007D432B /* SWRevealViewController.m in Sources */,
 				258613AA1BF2774B00BA6220 /* AppDelegate.swift in Sources */,
 				25B46FE11C060F56009C1D90 /* IntroViewController.swift in Sources */,
 			);
@@ -290,10 +307,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TrailsTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = john.TrailsTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrailsTutorial/TrailsTutorial-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,10 +322,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TrailsTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = john.TrailsTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrailsTutorial/TrailsTutorial-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
