@@ -14,12 +14,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var TrailsMapView: MKMapView!
 
-    var xml:XMLIndexer!
+    var gpx:[XMLIndexer]! = []
     
-    var pointToDraw:[CLLocationCoordinate2D]=[]
+    var pointToDraw:[CLLocationCoordinate2D] = []
     var pointCount = 0;
     
-    var pointToAnnotate:[NewAnnotation]=[]
+    var pointToAnnotate:[NewAnnotation] = []
     
     var currentLatitude = 37.743813
     var currentLongitude = 127.139749
@@ -28,47 +28,31 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     // property for current location
     let locationManager = CLLocationManager()
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // request permission whihe the app is in foreground
         self.locationManager.requestWhenInUseAuthorization()
         
-        /**********  Set Coordinate region  **********/
+        // Set map view coordinate
+        setRegionOfTrailMap(self.TrailsMapView, latitude: currentLatitude, longtitude: currentLongitude, span: currentSpan)
         
-        var currentLocation
-        = CLLocationCoordinate2DMake(currentLatitude, currentLongitude ) // location of Kookmin University
-        var mapSpan
-        = MKCoordinateSpanMake(currentSpan, currentSpan) // smaller value, closer view
-        var mapRegion
-        = MKCoordinateRegionMake(currentLocation, mapSpan)
+        // Get path of GPX file and parse
+        gpx.append(GPXFileToParsedArrayByFilepath("example", type: "gpx"))
         
-        self.TrailsMapView.setRegion(mapRegion, animated: true)
-        
-        /**********  MKPolyline be here !!  **********/
-        
-        if let filepath = NSBundle.mainBundle().pathForResource("example", ofType: "gpx") {
-            do {
-                let contents = try NSString(contentsOfFile: filepath, usedEncoding: nil) as String
-                //print(contents)
-                xml = SWXMLHash.parse(contents) // yoon // parse xml and make XMLIndexer
-                
-            } catch {
-                // contents could not be loaded
-                print("contents load failed\n")
-            }
-        } else {
-            // example.txt not found!
-            print("there is no contents\n")
+        // Draw polyline in the map view
+        for chosenGPX in gpx {
+            
+            pointCount = 0
+            enumerateForTrack(chosenGPX, level: 0)
+            
+            let myPolyline = MKPolyline(coordinates: &pointToDraw, count: pointCount)
+            TrailsMapView.addOverlay(myPolyline)
         }
-        
-        /**********  MKPolyline be here !!  **********/
-
-        pointCount = 0
-        enumerateForTrack(xml, level: 0)
-
-        let myPolyline = MKPolyline(coordinates: &pointToDraw, count: pointCount)
-        TrailsMapView.addOverlay(myPolyline)
         
         
         if self.revealViewController() != nil {
@@ -78,21 +62,71 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    
+    
+    
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
-        /**********  Annotation be here !!  **********/
+        // Pin annotation in the Map view
+        for chosenGPX in gpx {
+            
+            pointCount = 0
+            enumerateForWaypoint(chosenGPX, level: 0)
+            TrailsMapView.addAnnotations(pointToAnnotate)
+
+        }
         
-        pointCount = 0
-        enumerateForWaypoint(xml, level: 0)
-        TrailsMapView.addAnnotations(pointToAnnotate)
     }
 
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    
+    func setRegionOfTrailMap(mapView: MKMapView, latitude: Double, longtitude: Double, span: Double) {
+        
+        var location
+        = CLLocationCoordinate2DMake(latitude, longtitude ) // location of Kookmin University
+        var mapSpan
+        = MKCoordinateSpanMake(span, span) // smaller value, closer view
+        var mapRegion
+        = MKCoordinateRegionMake(location, mapSpan)
+        
+        self.TrailsMapView.setRegion(mapRegion, animated: true)
+    }
+    
+    
+    
+    
+    
+    func GPXFileToParsedArrayByFilepath(filename: String, type: String)->XMLIndexer! {
+        if let filepath = NSBundle.mainBundle().pathForResource(filename, ofType: type) {
+            do {
+                let contents = try NSString(contentsOfFile: filepath, usedEncoding: nil) as String
+                //xml = SWXMLHash.parse(contents) // yoon // parse xml and make XMLIndexer
+                return SWXMLHash.parse(contents)
+            } catch {
+                // contents could not be loaded
+                print("contents load failed\n")
+            }
+        } else {
+            // example.txt not found!
+            print("there is no contents\n")
+        }
+        return nil as XMLIndexer!
+    }
+    
+    
     
     /*
     * Functions for showing current location
@@ -104,7 +138,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     * https://www.veasoftware.com/tutorials/2015/7/25/map-view-current-location-in-swift-xcode-7-ios-9-tutorial
     */
     
-    
     @IBAction func showCurrentLocation(sender: AnyObject) {
         
         self.locationManager.delegate = self
@@ -115,6 +148,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.startUpdatingLocation()
         self.TrailsMapView.showsUserLocation = true
     }
+    
+    
     
     /*
      * Functions for Drawing Track
@@ -162,6 +197,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         return nil
     }
+    
+    
     
     /*
     * Functions for Adding Annotations
@@ -237,6 +274,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         return nil
     }
+    
+
     
 }
 
