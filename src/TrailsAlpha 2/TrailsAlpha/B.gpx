@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gpx
+  version="1.1"
+  creator="Tranggle Track 1.1.0 - http://www.beaglemap.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <link href="http://www.beaglemap.com">
+      <text>Tranggle 3.2.5</text>
+    </link>
+    <time>2015-12-28T09:42:10Z</time>
+    <bounds minlat="37.744153" minlon="127.138397" maxlat="37.745089" maxlon="127.139807"/>
+    <desc><![CDATA[CREATOR: 6DD0F48A78FADFEF, MODEL: SM-N910S, FIRMWARE: 5.1.1, PRODUCT: SK, CONSTANT: M40, CATEGORY: Walking, NETWORK: SKTelecom(LTE)]]></desc>
+  </metadata>
+  <wpt lat="37.745093" lon="127.138408">
+    <ele>283.329494</ele>
+    <name><![CDATA[귀룽니무 a지역연결  길]]></name>
+    <time>2015-12-28T09:32:40Z</time>
+    <sym><![CDATA[20151228093312Waypoint]]></sym>
+  </wpt>
+
+  <wpt lat="37.744989" lon="127.138714">
+    <ele>271.932964</ele>
+    <name><![CDATA[묵논산책로]]></name>
+    <time>2015-12-28T09:35:00Z</time>
+    <sym><![CDATA[20151228093508Waypoint]]></sym>
+  </wpt>
+
+  <wpt lat="37.744899" lon="127.139170">
+    <ele>280.154024</ele>
+    <name><![CDATA[묵논]]></name>
+    <time>2015-12-28T09:35:51Z</time>
+    <sym><![CDATA[20151228093617Waypoint]]></sym>
+  </wpt>
+
+  <wpt lat="37.744757" lon="127.139702">
+    <ele>278.522961</ele>
+    <name><![CDATA[C지역 연결로]]></name>
+    <time>2015-12-28T09:38:06Z</time>
+    <sym><![CDATA[20151228093812Waypoint]]></sym>
+  </wpt>
+
+  <wpt lat="37.744738" lon="127.139341">
+    <ele>271.759856</ele>
+    <name><![CDATA[웨이포인트 5]]></name>
+    <time>2015-12-28T09:38:50Z</time>
+  </wpt>
+
+  <wpt lat="37.744709" lon="127.139334">
+    <ele>271.771617</ele>
+    <name><![CDATA[캠빙장]]></name>
+    <time>2015-12-28T09:39:06Z</time>
+    <sym><![CDATA[20151228093928Waypoint]]></sym>
+  </wpt>
+
+  <wpt lat="37.744244" lon="127.138544">
+    <ele>262.276915</ele>
+    <name><![CDATA[B 지역시작점돌다리]]></name>
+    <time>2015-12-28T09:41:25Z</time>
+    <sym><![CDATA[20151228094146Waypoint]]></sym>
+  </wpt>
+
+  <trk>
+    <trkseg>
+    <trkpt lat="37.745089" lon="127.138397">
+      <ele>284.745431</ele>
+      <time>2015-12-28T09:32:40Z</time>
+      <extensions>
+        <dbm>-108</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.745026" lon="127.138458">
+      <ele>278.330752</ele>
+      <time>2015-12-28T09:34:08Z</time>
+      <extensions>
+        <dbm>-105</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744955" lon="127.138521">
+      <ele>271.916073</ele>
+      <time>2015-12-28T09:34:19Z</time>
+      <extensions>
+        <dbm>-105</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744926" lon="127.138584">
+      <ele>271.874317</ele>
+      <time>2015-12-28T09:34:28Z</time>
+      <extensions>
+        <dbm>-106</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744920" lon="127.138678">
+      <ele>271.823257</ele>
+      <time>2015-12-28T09:34:41Z</time>
+      <extensions>
+        <dbm>-106</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744964" lon="127.138741">
+      <ele>272.269993</ele>
+      <time>2015-12-28T09:35:00Z</time>
+      <extensions>
+        <dbm>-103</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744978" lon="127.138819">
+      <ele>272.982010</ele>
+      <time>2015-12-28T09:35:13Z</time>
+      <extensions>
+        <dbm>-103</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.745004" lon="127.138905">
+      <ele>273.297228</ele>
+      <time>2015-12-28T09:35:28Z</time>
+      <extensions>
+        <dbm>-104</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744984" lon="127.139026">
+      <ele>274.041944</ele>
+      <time>2015-12-28T09:35:39Z</time>
+      <extensions>
+        <dbm>-104</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744952" lon="127.139124">
+      <ele>274.768120</ele>
+      <time>2015-12-28T09:35:51Z</time>
+      <extensions>
+        <dbm>-98</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744912" lon="127.139212">
+      <ele>275.021856</ele>
+      <time>2015-12-28T09:36:18Z</time>
+      <extensions>
+        <dbm>-92</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744870" lon="127.139301">
+      <ele>275.208361</ele>
+      <time>2015-12-28T09:36:34Z</time>
+      <extensions>
+        <dbm>-96</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744836" lon="127.139413">
+      <ele>275.467965</ele>
+      <time>2015-12-28T09:36:45Z</time>
+      <extensions>
+        <dbm>-96</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744812" lon="127.139525">
+      <ele>275.834344</ele>
+      <time>2015-12-28T09:37:09Z</time>
+      <extensions>
+        <dbm>-97</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744787" lon="127.139635">
+      <ele>276.127017</ele>
+      <time>2015-12-28T09:37:22Z</time>
+      <extensions>
+        <dbm>-96</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744797" lon="127.139728">
+      <ele>276.653385</ele>
+      <time>2015-12-28T09:37:50Z</time>
+      <extensions>
+        <dbm>-89</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744779" lon="127.139755">
+      <ele>276.689209</ele>
+      <time>2015-12-28T09:38:06Z</time>
+      <extensions>
+        <dbm>-92</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744803" lon="127.139722">
+      <ele>276.648236</ele>
+      <time>2015-12-28T09:38:17Z</time>
+      <extensions>
+        <dbm>-92</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744808" lon="127.139622">
+      <ele>276.501555</ele>
+      <time>2015-12-28T09:38:26Z</time>
+      <extensions>
+        <dbm>-94</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744813" lon="127.139526">
+      <ele>276.322344</ele>
+      <time>2015-12-28T09:38:41Z</time>
+      <extensions>
+        <dbm>-94</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744783" lon="127.139426">
+      <ele>276.075786</ele>
+      <time>2015-12-28T09:38:50Z</time>
+      <extensions>
+        <dbm>-90</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744722" lon="127.139331">
+      <ele>275.855227</ele>
+      <time>2015-12-28T09:39:06Z</time>
+      <extensions>
+        <dbm>-90</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744669" lon="127.139230">
+      <ele>275.678887</ele>
+      <time>2015-12-28T09:39:41Z</time>
+      <extensions>
+        <dbm>-91</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744622" lon="127.139121">
+      <ele>275.280709</ele>
+      <time>2015-12-28T09:39:50Z</time>
+      <extensions>
+        <dbm>-91</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744566" lon="127.139029">
+      <ele>275.280709</ele>
+      <time>2015-12-28T09:40:03Z</time>
+      <extensions>
+        <dbm>-98</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744497" lon="127.138942">
+      <ele>275.452211</ele>
+      <time>2015-12-28T09:40:16Z</time>
+      <extensions>
+        <dbm>-98</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744409" lon="127.138878">
+      <ele>275.452211</ele>
+      <time>2015-12-28T09:40:29Z</time>
+      <extensions>
+        <dbm>-95</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744331" lon="127.138802">
+      <ele>275.382631</ele>
+      <time>2015-12-28T09:40:37Z</time>
+      <extensions>
+        <dbm>-95</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744287" lon="127.138710">
+      <ele>274.906755</ele>
+      <time>2015-12-28T09:40:49Z</time>
+      <extensions>
+        <dbm>-90</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744262" lon="127.138600">
+      <ele>274.420067</ele>
+      <time>2015-12-28T09:40:57Z</time>
+      <extensions>
+        <dbm>-90</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744223" lon="127.138544">
+      <ele>273.836139</ele>
+      <time>2015-12-28T09:41:14Z</time>
+      <extensions>
+        <dbm>-99</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744191" lon="127.138544">
+      <ele>273.501705</ele>
+      <time>2015-12-28T09:41:25Z</time>
+      <extensions>
+        <dbm>-99</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744166" lon="127.138529">
+      <ele>273.102747</ele>
+      <time>2015-12-28T09:41:48Z</time>
+      <extensions>
+        <dbm>-93</dbm>
+      </extensions>
+    </trkpt>
+    <trkpt lat="37.744201" lon="127.138491">
+      <ele>272.241737</ele>
+      <time>2015-12-28T09:41:53Z</time>
+      <extensions>
+        <dbm>-93</dbm>
+      </extensions>
+    </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
