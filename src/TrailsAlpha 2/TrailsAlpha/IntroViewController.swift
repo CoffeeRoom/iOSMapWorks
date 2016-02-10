@@ -21,7 +21,7 @@ class IntroViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setBlurEffectedBackground(ImageViewEvent)
+        //setBlurEffectedBackground(ImageViewEvent)
         CopyrightLabel.text = "Copyright © 2015 CoffeeRoom All rights reserved."
         
         /* Pull to refresh
