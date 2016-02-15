@@ -26,6 +26,7 @@
 		67C8B58D1C4131FA0018CD5D /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B58C1C4131FA0018CD5D /* EmergencyViewController.swift */; };
 		67C8B58F1C4159C50018CD5D /* TrailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B58E1C4159C50018CD5D /* TrailMenuViewController.swift */; };
 		67C8B5911C4281500018CD5D /* SKIN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67C8B5901C4281500018CD5D /* SKIN.jpg */; };
+		67D8C0F31C706FC600369C03 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8C0F21C706FC600369C03 /* ReservationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		67C8B58C1C4131FA0018CD5D /* EmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		67C8B58E1C4159C50018CD5D /* TrailMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailMenuViewController.swift; sourceTree = "<group>"; };
 		67C8B5901C4281500018CD5D /* SKIN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SKIN.jpg; sourceTree = "<group>"; };
+		67D8C0F21C706FC600369C03 /* ReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				67C8B58E1C4159C50018CD5D /* TrailMenuViewController.swift */,
 				67C8B58C1C4131FA0018CD5D /* EmergencyViewController.swift */,
 				252D158C1C6705BD00E3DDFA /* InformationViewController.swift */,
+				67D8C0F21C706FC600369C03 /* ReservationViewController.swift */,
 				25E954371C0BB11500E42161 /* Main.storyboard */,
 				25E9543F1C0BB11500E42161 /* LaunchScreen.storyboard */,
 				25E9543D1C0BB11500E42161 /* Assets.xcassets */,
@@ -220,6 +223,7 @@
 				67C8B58D1C4131FA0018CD5D /* EmergencyViewController.swift in Sources */,
 				25713D8F1C174B7200035B56 /* MapViewController.swift in Sources */,
 				25E954341C0BB11500E42161 /* AppDelegate.swift in Sources */,
+				67D8C0F31C706FC600369C03 /* ReservationViewController.swift in Sources */,
 				25E9543C1C0BB11500E42161 /* TrailsAlpha.xcdatamodeld in Sources */,
 				25713D8D1C174B5C00035B56 /* SWXMLHash.swift in Sources */,
 				258C81441C0BC7750003A296 /* SWRevealViewController.m in Sources */,

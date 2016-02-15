@@ -31,14 +31,15 @@ class IntroViewController: UITableViewController {
          * > http://www.ioscreator.com/tutorials/add-pull-to-refresh-table-view-ios8-swift
          *
          */
-        
-//        print(UIImage(named: "SKIN.jpg"))
-//        TableViewMenu.backgroundView = UIImageView(image: UIImage(named: "SKIN.jpg"))
-        
+       
         // set up the refresh control
         self.refreshCtrl.attributedTitle = NSAttributedString(string: "화면을 아래로 당겨 지도정보를 최신화합니다.")
         self.refreshCtrl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.TableViewMenu?.addSubview(self.refreshCtrl)
+        
+        
+        //        print(UIImage(named: "SKIN.jpg"))
+        //        TableViewMenu.backgroundView = UIImageView(image: UIImage(named: "SKIN.jpg"))
         
     }
 
