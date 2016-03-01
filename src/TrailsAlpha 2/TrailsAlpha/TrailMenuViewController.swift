@@ -13,6 +13,20 @@ class TrailMenuViewController: UIViewController {
     @IBOutlet weak var TrailListTable: UITableView!
     
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        TrailListTable.bounces = false
+        
+        TrailListTable.backgroundView =  UIImageView(image: UIImage(named: "swipe2.jpg"))
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        
+        blurView.frame = TrailListTable.bounds
+        TrailListTable.insertSubview(blurView, atIndex: 0)
+        
+        
     }
     
 }

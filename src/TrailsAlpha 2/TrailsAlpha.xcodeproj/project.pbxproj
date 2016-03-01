@@ -23,9 +23,13 @@
 		25E9543C1C0BB11500E42161 /* TrailsAlpha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25E9543A1C0BB11500E42161 /* TrailsAlpha.xcdatamodeld */; };
 		25E9543E1C0BB11500E42161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E9543D1C0BB11500E42161 /* Assets.xcassets */; };
 		25E954411C0BB11500E42161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E9543F1C0BB11500E42161 /* LaunchScreen.storyboard */; };
+		67A89D731C857A59006DFB32 /* NanumGothic.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 67A89D721C857A59006DFB32 /* NanumGothic.ttc */; };
+		67BAB86F1C7966C000796881 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67BAB86B1C7966C000796881 /* main.jpg */; };
+		67BAB8701C7966C000796881 /* information.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67BAB86C1C7966C000796881 /* information.jpg */; };
+		67BAB8711C7966C000796881 /* swipe1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67BAB86D1C7966C000796881 /* swipe1.jpg */; };
+		67BAB8721C7966C000796881 /* swipe2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67BAB86E1C7966C000796881 /* swipe2.jpg */; };
 		67C8B58D1C4131FA0018CD5D /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B58C1C4131FA0018CD5D /* EmergencyViewController.swift */; };
 		67C8B58F1C4159C50018CD5D /* TrailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B58E1C4159C50018CD5D /* TrailMenuViewController.swift */; };
-		67C8B5911C4281500018CD5D /* SKIN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67C8B5901C4281500018CD5D /* SKIN.jpg */; };
 		67D8C0F31C706FC600369C03 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8C0F21C706FC600369C03 /* ReservationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +47,7 @@
 		25AF9AEB1C36513900E31070 /* B.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = B.gpx; sourceTree = "<group>"; };
 		25AF9AEC1C36513900E31070 /* C.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = C.gpx; sourceTree = "<group>"; };
 		25AF9AED1C36513900E31070 /* D.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = D.gpx; sourceTree = "<group>"; };
-		25E954301C0BB11500E42161 /* TrailsAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailsAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E954301C0BB11500E42161 /* 실비아 숲 탐험대.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "실비아 숲 탐험대.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E954331C0BB11500E42161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E954351C0BB11500E42161 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		25E954381C0BB11500E42161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,9 +55,13 @@
 		25E9543D1C0BB11500E42161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25E954401C0BB11500E42161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25E954421C0BB11500E42161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67A89D721C857A59006DFB32 /* NanumGothic.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.ttc; sourceTree = "<group>"; };
+		67BAB86B1C7966C000796881 /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
+		67BAB86C1C7966C000796881 /* information.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = information.jpg; sourceTree = "<group>"; };
+		67BAB86D1C7966C000796881 /* swipe1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = swipe1.jpg; sourceTree = "<group>"; };
+		67BAB86E1C7966C000796881 /* swipe2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = swipe2.jpg; sourceTree = "<group>"; };
 		67C8B58C1C4131FA0018CD5D /* EmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		67C8B58E1C4159C50018CD5D /* TrailMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailMenuViewController.swift; sourceTree = "<group>"; };
-		67C8B5901C4281500018CD5D /* SKIN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SKIN.jpg; sourceTree = "<group>"; };
 		67D8C0F21C706FC600369C03 /* ReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +117,7 @@
 		25E954311C0BB11500E42161 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25E954301C0BB11500E42161 /* TrailsAlpha.app */,
+				25E954301C0BB11500E42161 /* 실비아 숲 탐험대.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,11 +125,11 @@
 		25E954321C0BB11500E42161 /* TrailsAlpha */ = {
 			isa = PBXGroup;
 			children = (
+				67BAB86A1C7966AE00796881 /* Skin */,
 				25AF9AF21C36514800E31070 /* GPX */,
 				25713D8A1C174B2E00035B56 /* SWXMLHash */,
 				258C81451C0BC77C0003A296 /* SWRevealView */,
 				25713D901C174ED800035B56 /* example.gpx */,
-				67C8B5901C4281500018CD5D /* SKIN.jpg */,
 				25E954331C0BB11500E42161 /* AppDelegate.swift */,
 				25E954351C0BB11500E42161 /* IntroViewController.swift */,
 				25713D8E1C174B7200035B56 /* MapViewController.swift */,
@@ -134,9 +142,21 @@
 				25E9543D1C0BB11500E42161 /* Assets.xcassets */,
 				25E954421C0BB11500E42161 /* Info.plist */,
 				252D158E1C67076400E3DDFA /* NanumMyeongjo.ttc */,
+				67A89D721C857A59006DFB32 /* NanumGothic.ttc */,
 				25E9543A1C0BB11500E42161 /* TrailsAlpha.xcdatamodeld */,
 			);
 			path = TrailsAlpha;
+			sourceTree = "<group>";
+		};
+		67BAB86A1C7966AE00796881 /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				67BAB86B1C7966C000796881 /* main.jpg */,
+				67BAB86C1C7966C000796881 /* information.jpg */,
+				67BAB86D1C7966C000796881 /* swipe1.jpg */,
+				67BAB86E1C7966C000796881 /* swipe2.jpg */,
+			);
+			name = Skin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +176,7 @@
 			);
 			name = TrailsAlpha;
 			productName = TrailsAlpha;
-			productReference = 25E954301C0BB11500E42161 /* TrailsAlpha.app */;
+			productReference = 25E954301C0BB11500E42161 /* 실비아 숲 탐험대.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -201,12 +221,16 @@
 				25AF9AEF1C36513900E31070 /* B.gpx in Resources */,
 				25AF9AF01C36513900E31070 /* C.gpx in Resources */,
 				25E954411C0BB11500E42161 /* LaunchScreen.storyboard in Resources */,
-				67C8B5911C4281500018CD5D /* SKIN.jpg in Resources */,
 				25713D911C174ED800035B56 /* example.gpx in Resources */,
 				25AF9AEE1C36513900E31070 /* A.gpx in Resources */,
+				67BAB86F1C7966C000796881 /* main.jpg in Resources */,
+				67BAB8701C7966C000796881 /* information.jpg in Resources */,
+				67A89D731C857A59006DFB32 /* NanumGothic.ttc in Resources */,
+				67BAB8721C7966C000796881 /* swipe2.jpg in Resources */,
 				25E9543E1C0BB11500E42161 /* Assets.xcassets in Resources */,
 				25AF9AF11C36513900E31070 /* D.gpx in Resources */,
 				25E954391C0BB11500E42161 /* Main.storyboard in Resources */,
+				67BAB8711C7966C000796881 /* swipe1.jpg in Resources */,
 				252D158F1C670C1300E3DDFA /* NanumMyeongjo.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,12 +363,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TrailsAlpha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = john.TrailsAlpha;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.sylvia;
+				PRODUCT_NAME = "실비아 숲 탐험대";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TrailsAlpha/TrailsAlpha-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -357,12 +381,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TrailsAlpha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = john.TrailsAlpha;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.sylvia;
+				PRODUCT_NAME = "실비아 숲 탐험대";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TrailsAlpha/TrailsAlpha-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";

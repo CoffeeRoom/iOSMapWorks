@@ -6,10 +6,12 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="NanumGothic.ttc">
+            <string>NanumGothicBold</string>
+            <string>NanumGothicBold</string>
+            <string>NanumGothicBold</string>
+        </mutableArray>
         <mutableArray key="NanumMyeongjo.ttc">
-            <string>NanumMyeongjoExtraBold</string>
-            <string>NanumMyeongjoExtraBold</string>
-            <string>NanumMyeongjoExtraBold</string>
             <string>NanumMyeongjo</string>
             <string>NanumMyeongjo</string>
             <string>NanumMyeongjo</string>
@@ -68,7 +70,7 @@
         <!--Intro View Controller-->
         <scene sceneID="8pu-UL-enc">
             <objects>
-                <tableViewController id="JZU-hZ-Bnq" customClass="IntroViewController" customModule="TrailsAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="JZU-hZ-Bnq" customClass="IntroViewController" customModule="실비아_숲_탐험대" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DaV-zp-69B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +94,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="숲길로" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP7-DZ-vFM">
                                                     <rect key="frame" x="136" y="22" width="445" height="77"/>
-                                                    <fontDescription key="fontDescription" name="NanumMyeongjoExtraBold" family="Nanum Myeongjo" pointSize="52"/>
+                                                    <fontDescription key="fontDescription" name="NanumGothicBold" family="Nanum Gothic" pointSize="52"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -120,7 +122,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="소개" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQU-fo-ZFi">
                                                     <rect key="frame" x="134" y="23" width="445" height="77"/>
-                                                    <fontDescription key="fontDescription" name="NanumMyeongjoExtraBold" family="Nanum Myeongjo" pointSize="52"/>
+                                                    <fontDescription key="fontDescription" name="NanumGothicBold" family="Nanum Gothic" pointSize="52"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -151,7 +153,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="예약" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJ6-aI-IT9">
                                                     <rect key="frame" x="133" y="23" width="445" height="77"/>
-                                                    <fontDescription key="fontDescription" name="NanumMyeongjoExtraBold" family="Nanum Myeongjo" pointSize="52"/>
+                                                    <fontDescription key="fontDescription" name="NanumGothicBold" family="Nanum Gothic" pointSize="52"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -353,7 +355,7 @@
         <!--Information View Controller-->
         <scene sceneID="Q5u-3H-wdW">
             <objects>
-                <tableViewController id="hR5-wi-qVd" customClass="InformationViewController" customModule="TrailsAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hR5-wi-qVd" customClass="InformationViewController" customModule="실비아_숲_탐험대" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3e5-D1-ZJd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,7 +383,7 @@
                             <constraints>
                                 <constraint firstItem="188-3M-3cg" firstAttribute="leading" secondItem="vKE-xA-RsO" secondAttribute="leading" constant="15" id="9v9-zv-yoi"/>
                                 <constraint firstAttribute="bottom" secondItem="188-3M-3cg" secondAttribute="bottom" constant="5" id="Zq5-Ct-Ejs"/>
-                                <constraint firstAttribute="bottom" secondItem="tGw-Be-lkg" secondAttribute="bottom" constant="5" id="noO-gQ-IiQ"/>
+                                <constraint firstAttribute="bottom" secondItem="tGw-Be-lkg" secondAttribute="bottom" constant="10" id="noO-gQ-IiQ"/>
                                 <constraint firstItem="tGw-Be-lkg" firstAttribute="centerX" secondItem="vKE-xA-RsO" secondAttribute="centerX" id="rBq-uo-31s"/>
                             </constraints>
                         </view>
@@ -396,7 +398,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBE-fJ-DKR">
-                                                    <rect key="frame" x="8" y="38" width="400" height="193"/>
+                                                    <rect key="frame" x="8" y="38" width="573" height="193"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Syivia, Silvia)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93i-gy-Bna">
                                                             <rect key="frame" x="96" y="16" width="141" height="26"/>
@@ -431,6 +433,7 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mBE-fJ-DKR" secondAttribute="trailing" id="biT-Ta-uLB"/>
                                                 <constraint firstItem="mBE-fJ-DKR" firstAttribute="leading" secondItem="8Uy-zy-e8A" secondAttribute="leadingMargin" id="xnR-OD-YE2"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -442,8 +445,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="387.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pV1-8A-dCT">
-                                                    <rect key="frame" x="8" y="8" width="400" height="374"/>
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pV1-8A-dCT">
+                                                    <rect key="frame" x="8" y="8" width="541" height="374"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시설 안내" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb4-A3-8cp">
                                                             <rect key="frame" x="8" y="8" width="165" height="37"/>
@@ -462,7 +465,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASi-eJ-ugf">
                                                             <rect key="frame" x="8" y="210" width="305" height="64"/>
                                                             <string key="text">[하계]  오전 9시  ~  오후 9시 
-[동계]  오전 10시 ~ 오후 11시</string>
+[동계]  오전 10시 ~ 오후 6시</string>
                                                             <fontDescription key="fontDescription" name="NanumMyeongjo" family="Nanum Myeongjo" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -497,6 +500,10 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pV1-8A-dCT" secondAttribute="trailing" id="iIw-HJ-UOx"/>
+                                                <constraint firstItem="pV1-8A-dCT" firstAttribute="leading" secondItem="rat-52-Uve" secondAttribute="leadingMargin" id="wK0-GJ-PmE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="166" id="X41-Bj-Osu">
@@ -542,6 +549,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="0JA-Kv-7Ij" firstAttribute="leading" secondItem="iiG-iI-Pa5" secondAttribute="leadingMargin" id="YOl-hH-xC1"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0JA-Kv-7Ij" secondAttribute="trailing" id="dIw-VL-2vh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -556,6 +564,18 @@
                             <outlet property="delegate" destination="hR5-wi-qVd" id="zgP-ny-6Vm"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="DescCellContentView" destination="mBE-fJ-DKR" id="6ai-T8-Uar"/>
+                        <outlet property="DescCellView" destination="cB5-jO-gqi" id="BsJ-V9-PXB"/>
+                        <outlet property="FacilityCellContentView" destination="pV1-8A-dCT" id="b74-vi-7fo"/>
+                        <outlet property="FacilityCellView" destination="Eeh-c1-zpQ" id="CBl-0J-8og"/>
+                        <outlet property="InformationTableView" destination="3e5-D1-ZJd" id="s0E-kK-ZOU"/>
+                        <outlet property="PathCellContentView" destination="0JA-Kv-7Ij" id="Rc8-eZ-eIi"/>
+                        <outlet property="PathCellView" destination="X41-Bj-Osu" id="nUo-Hw-6rV"/>
+                        <outlet property="topNaviView" destination="vKE-xA-RsO" id="da9-Gt-CTd"/>
+                        <outlet property="topNaviViewBackButton" destination="188-3M-3cg" id="maH-yH-laK"/>
+                        <outlet property="topNaviViewLabel" destination="tGw-Be-lkg" id="oSi-0l-osV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkO-pB-W26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -564,7 +584,7 @@
         <!--Map View Controller-->
         <scene sceneID="WWl-Mz-ieQ">
             <objects>
-                <viewController id="Ut3-MG-17s" customClass="MapViewController" customModule="TrailsAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ut3-MG-17s" customClass="MapViewController" customModule="실비아_숲_탐험대" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I8N-zV-YCt"/>
                         <viewControllerLayoutGuide type="bottom" id="TqB-xg-FJ6"/>
@@ -597,20 +617,20 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="ZUv-8g-IdX"/>
-                                    <barButtonItem title="Back" width="58" id="8Vt-GW-ODk">
+                                    <barButtonItem title="뒤로가기" width="58" id="8Vt-GW-ODk">
                                         <connections>
                                             <action selector="BackButtonPushed:" destination="Ut3-MG-17s" id="Qw7-we-Ac6"/>
                                             <segue destination="JZU-hZ-Bnq" kind="presentation" modalTransitionStyle="crossDissolve" id="TNj-B3-5KI"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EvL-dk-CxD"/>
-                                    <barButtonItem title="CurrentLocation" id="cDX-cV-kQB">
+                                    <barButtonItem title="현재위치" id="cDX-cV-kQB">
                                         <connections>
                                             <action selector="showCurrentLocation:" destination="Ut3-MG-17s" id="ilZ-mo-KBD"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="LFw-oq-kcZ"/>
-                                    <barButtonItem title="List" id="CKu-R2-6xo">
+                                    <barButtonItem title="숲길" id="CKu-R2-6xo">
                                         <connections>
                                             <segue destination="Ut3-MG-17s" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="Qg3-Ua-3hd"/>
                                         </connections>
@@ -645,7 +665,7 @@
         <!--Emergency View Controller-->
         <scene sceneID="3y8-5P-Jqt">
             <objects>
-                <viewController id="BGD-7z-E2V" customClass="EmergencyViewController" customModule="TrailsAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BGD-7z-E2V" customClass="EmergencyViewController" customModule="실비아_숲_탐험대" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Omo-nL-ixa"/>
                         <viewControllerLayoutGuide type="bottom" id="iJg-vO-HiP"/>
@@ -744,7 +764,7 @@
         <!--Reservation View Controller-->
         <scene sceneID="yz8-hZ-hlf">
             <objects>
-                <viewController id="B13-6o-lCC" customClass="ReservationViewController" customModule="TrailsAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B13-6o-lCC" customClass="ReservationViewController" customModule="실비아_숲_탐험대" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TQe-my-edV"/>
                         <viewControllerLayoutGuide type="bottom" id="QG9-2G-SLF"/>
@@ -814,7 +834,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 명" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-LQ-cu1">
-                                <rect key="frame" x="70" y="312" width="50" height="21"/>
+                                <rect key="frame" x="86" y="313" width="50" height="21"/>
                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="Nanum Myeongjo" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -831,7 +851,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="노년" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq2-dS-JYg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="어르신" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq2-dS-JYg">
                                 <rect key="frame" x="20" y="313" width="57" height="21"/>
                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="Nanum Myeongjo" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -911,6 +931,10 @@
                                     <action selector="StepperForYoung:" destination="B13-6o-lCC" eventType="valueChanged" id="RFd-Qu-15C"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-hh-Z3g">
+                                <rect key="frame" x="212" y="489" width="177" height="30"/>
+                                <state key="normal" title="홈페이지 가격정보로 이동하기"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -919,6 +943,7 @@
                             <constraint firstItem="cNx-nM-9LW" firstAttribute="trailing" secondItem="s8e-lU-kEe" secondAttribute="trailingMargin" constant="5" id="H53-8A-cE7"/>
                             <constraint firstItem="laH-ma-QZO" firstAttribute="centerX" secondItem="s8e-lU-kEe" secondAttribute="centerX" id="TtU-pc-Vh7"/>
                             <constraint firstItem="WSa-6p-ZIR" firstAttribute="leading" secondItem="s8e-lU-kEe" secondAttribute="leadingMargin" constant="-20" id="XIo-fw-Rt5"/>
+                            <constraint firstItem="AsI-hh-Z3g" firstAttribute="centerX" secondItem="s8e-lU-kEe" secondAttribute="centerX" id="XQE-RG-2eu"/>
                             <constraint firstItem="BFL-Fv-nuE" firstAttribute="trailing" secondItem="s8e-lU-kEe" secondAttribute="trailingMargin" constant="5" id="g2h-IB-rnP"/>
                             <constraint firstItem="GUn-iq-o6h" firstAttribute="trailing" secondItem="s8e-lU-kEe" secondAttribute="trailingMargin" constant="5" id="mMk-6S-pLA"/>
                             <constraint firstItem="Ckn-lH-X1W" firstAttribute="trailing" secondItem="s8e-lU-kEe" secondAttribute="trailingMargin" constant="5" id="wJc-7s-lEL"/>
@@ -1060,7 +1085,7 @@
         <!--Trail Menu View Controller-->
         <scene sceneID="6mZ-0k-cts">
             <objects>
-                <viewController id="rFh-TU-6AO" customClass="TrailMenuViewController" customModule="TrailsAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rFh-TU-6AO" customClass="TrailMenuViewController" customModule="실비아_숲_탐험대" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ibU-wU-cE4"/>
                         <viewControllerLayoutGuide type="bottom" id="n1O-cG-xth"/>
@@ -1070,7 +1095,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-ol-RVF">
-                                <rect key="frame" x="340" y="0.0" width="280" height="600"/>
+                                <rect key="frame" x="340" y="0.0" width="280" height="718"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="APg-GA-tDv">
@@ -1097,6 +1122,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="n1O-cG-xth" firstAttribute="top" secondItem="5L8-ol-RVF" secondAttribute="bottom" id="1va-wi-01r"/>
+                            <constraint firstItem="5L8-ol-RVF" firstAttribute="top" secondItem="92v-gi-wUn" secondAttribute="topMargin" constant="20" id="9DU-Kq-M7Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5L8-ol-RVF" secondAttribute="trailing" constant="-20" id="sgJ-0V-feF"/>
                         </constraints>
                     </view>
@@ -1118,9 +1145,9 @@
         <image name="picForest" width="2448" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="pyM-b0-wc1"/>
         <segue reference="R0b-e5-MmH"/>
         <segue reference="D6e-FK-fbT"/>
-        <segue reference="X51-fF-Xb6"/>
         <segue reference="EJ3-Fa-FuD"/>
     </inferredMetricsTieBreakers>
 </document>
